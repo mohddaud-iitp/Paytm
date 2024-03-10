@@ -5,6 +5,11 @@ const accountRouter = require("./account");
 
 const router = express.Router();
 
+
+router.get("/", (req,res) =>{
+    res.json("Welcome to my paytm app");
+} )
+ 
 router.use("/user", userRouter);
 router.use("/account", accountRouter);
 
