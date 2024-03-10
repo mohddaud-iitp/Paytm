@@ -1,4 +1,3 @@
-import React from 'react'
 import { useSearchParams } from 'react-router-dom';
 import axios from "axios";
 import { useState } from 'react';
@@ -11,8 +10,7 @@ export const SendMoney = () => {
     const [amount, setAmount] = useState(0); 
     const navigate = useNavigate();
 
-    return (
-    <div className="flex justify-center h-screen bg-gray-100">
+    return <div className="flex justify-center h-screen bg-gray-100">
         <div className="h-full flex flex-col justify-center">
             <div
                 className="border h-min text-card-foreground max-w-md p-4 space-y-8 w-96 bg-white shadow-lg rounded-lg"
@@ -46,7 +44,7 @@ export const SendMoney = () => {
                     />
                     </div>
                     <button onClick= {async () => {
-                          const response = await axios.post("https://paytm-for-u.vercel.app/api/v1/account/transfer", {
+                          const response = await axios.post("http://localhost:3000/api/v1/account/transfer", {
                             to: id,
                             amount
                         }, {
@@ -64,5 +62,4 @@ export const SendMoney = () => {
         </div>
       </div>
     </div>
-    )
-}   
+}
