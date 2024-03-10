@@ -11,7 +11,7 @@ import {Home} from "./Pages/Home";
 
 
 
-function App() {
+function App() { 
 return (
   <>
      <BrowserRouter>
@@ -19,11 +19,11 @@ return (
         <Route path = "/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="/signin" element={<Signin />} /> 
         
         <Route path="/send" element={<SendMoney />} /> 
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> 
   </>
 )
 } 
